@@ -283,8 +283,8 @@ export async function fetchBaselineResults(
       repo,
       workflow_id: workflowName,
       branch,
-      status: 'completed',
-      conclusion: 'success',
+      // `status` also accepts conclusion values; the endpoint has no `conclusion` parameter
+      status: 'success',
       per_page: 1
     });
 
